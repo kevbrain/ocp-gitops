@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: nexus3
+  annotations:
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"nexus3:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"nexus3\")].image"}]'
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: null
+  labels:
+    app: nexus3
+    app.kubernetes.io/component: nexus3
+    app.kubernetes.io/instance: nexus3
+  name: nexus3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: nexus3
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: nexus3
+    spec:
+      containers:
+      - image: >-	
+          sonatype/nexus3@sha256:75fd31386b9c300df415d3e4edd464e8e27e1169e096132f56a40abfed7e4979
+        name: nexus3
+        ports:
+        - containerPort: 8081
+          protocol: TCP
+        resources: {}
+        volumeMounts:
+        - mountPath: /nexus-data
+          name: nexus3-volume-1
+      volumes:
+      - emptyDir: {}
+        name: nexus3-volume-1

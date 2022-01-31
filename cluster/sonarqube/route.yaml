@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2021-09-10T09:28:14Z"
+  labels:
+    app: sonarqube
+    app.kubernetes.io/component: sonarqube
+    app.kubernetes.io/instance: cluster-configs
+  name: sonarqube
+  namespace: sonarqube
+spec:
+  host: sonarqube-sonarqube.apps.ocp-lab.its4u.eu
+  port:
+    targetPort: 9000-tcp
+  to:
+    kind: Service
+    name: sonarqube
+    weight: 100
+  wildcardPolicy: None

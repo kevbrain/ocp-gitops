@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2021-09-10T09:11:06Z"
+  labels:
+    app: nexus3
+    app.kubernetes.io/component: nexus3
+    app.kubernetes.io/instance: cluster-configs
+  name: nexus3
+  namespace: nexus3
+spec:
+  host: nexus3-nexus3.apps.ocp-lab.its4u.eu
+  port:
+    targetPort: 8081-tcp
+  to:
+    kind: Service
+    name: nexus3
+    weight: 100
+  wildcardPolicy: None
