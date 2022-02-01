@@ -13,7 +13,7 @@ spec:
     - name: rollout-deploy
       params:
         - name: SCRIPT
-          value: oc rollout restart deployment/migrator
+          value: oc rollout restart deployment/capacity-tool
         - name: VERSION
           value: latest
       runAfter:
