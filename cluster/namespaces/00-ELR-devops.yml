@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: EventListener
     app.kubernetes.io/part-of: Triggers
-    eventlistener: capacity-tool
+    eventlistener: orchestraror
   name: el-devops-route
   namespace: devops
 spec:
