@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: argo4u-dev-trigger
+  namespace: argo4u-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: argo4u-dev-triggerbinding
+  template:
+    ref: argo4u-dev-triggertemplate
