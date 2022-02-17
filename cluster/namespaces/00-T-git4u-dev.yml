@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: git4u-dev-trigger
+  namespace: git4u-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: git4u-dev-triggerbinding
+  template:
+    ref: git4u-dev-triggertemplate
