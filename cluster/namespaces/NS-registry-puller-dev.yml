@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: registry-puller-dev
   annotations:
-      openshift.io/requester: OCP BootStrapper
+      openshift.io/requester: OCP Deployer
 spec:
   finalizers:
   - kubernetes
