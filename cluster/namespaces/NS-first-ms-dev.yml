@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: first-ms-dev
   annotations:
-      openshift.io/requester: OCP Deployer
+      openshift.io/requester: OCP BootStrapper
 spec:
   finalizers:
   - kubernetes
