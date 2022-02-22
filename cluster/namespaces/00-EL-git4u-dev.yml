@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: git4u-dev-eventlistener
-  namespace: git4u-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: git4u-dev-trigger
