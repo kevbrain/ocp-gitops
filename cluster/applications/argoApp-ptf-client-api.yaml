@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ptf-client-api-dev
+  name: ptf-client-api-tst
   namespace: openshift-gitops
 spec:
   destination:
