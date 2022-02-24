@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: supplier-api-dev
+  name: supplier-api-int
   namespace: openshift-gitops
 spec:
   destination:
