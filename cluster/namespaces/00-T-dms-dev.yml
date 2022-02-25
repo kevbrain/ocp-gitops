@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: dms-dev-trigger
+  namespace: dms-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: dms-dev-triggerbinding
+  template:
+    ref: dms-dev-triggertemplate
