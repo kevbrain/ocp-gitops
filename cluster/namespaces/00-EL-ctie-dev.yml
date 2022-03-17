@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: ctie-dev-eventlistener
+  namespace: ctie-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: ctie-dev-trigger
