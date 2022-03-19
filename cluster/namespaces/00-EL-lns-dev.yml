@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: lns-dev-eventlistener
+  namespace: lns-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: lns-dev-trigger
