@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: ctie-demo-dev-trigger
+  namespace: ctie-demo-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: ctie-demo-dev-triggerbinding
+  template:
+    ref: ctie-demo-dev-triggertemplate

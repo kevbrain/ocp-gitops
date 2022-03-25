@@ -1,0 +1,44 @@
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegeEscalation: true
+allowPrivilegedContainer: false
+allowedCapabilities: null
+apiVersion: security.openshift.io/v1
+defaultAddCapabilities: null
+groups:
+- system:cluster-admins
+kind: SecurityContextConstraints
+metadata:
+  name: ctie-demo-scc
+readOnlyRootFilesystem: false
+requiredDropCapabilities:
+- MKNOD
+fsGroup:
+  type: MustRunAs
+  ranges:
+  - min: 455555
+    max: 455555
+runAsUser:
+  type: MustRunAsRange
+  uidRangeMin: 455555
+  uidRangeMax: 455555
+seLinuxContext:
+  type: MustRunAs
+supplementalGroups:
+   type: MustRunAs
+   ranges:
+   - min: 455555
+     max: 455555
+users:
+- system:serviceaccount:ctie-demo-{{bil.environment}}:ctie-demo-sa
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
+- nfs
