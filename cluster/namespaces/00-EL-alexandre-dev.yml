@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: alexandre-dev-eventlistener
+  namespace: alexandre-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: alexandre-dev-trigger
