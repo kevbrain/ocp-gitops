@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: gitops-importer-dev-eventlistener
+  namespace: gitops-importer-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: gitops-importer-dev-trigger

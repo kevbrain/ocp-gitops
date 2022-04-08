@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: gitops-importer-dev-trigger
+  namespace: gitops-importer-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: gitops-importer-dev-triggerbinding
+  template:
+    ref: gitops-importer-dev-triggertemplate

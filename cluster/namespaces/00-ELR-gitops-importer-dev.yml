@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: EventListener
+    app.kubernetes.io/part-of: Triggers
+    eventlistener: gitops-importer
+  name: el-gitops-importer-dev-route
+  namespace: gitops-importer-dev
+spec:
+  host: el-gitops-importer-dev.apps.ocp-lab.its4u.eu
+  port:
+    targetPort: http-listener
+  to:
+    kind: Service
+    name: el-gitops-importer-dev-eventlistener
+    weight: 100
+  wildcardPolicy: None
