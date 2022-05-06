@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: formations-dev-eventlistener
+  namespace: formations-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: formations-dev-trigger
