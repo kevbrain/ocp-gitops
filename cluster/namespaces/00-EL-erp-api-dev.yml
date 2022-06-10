@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: erp-api-dev-eventlistener
-  namespace: erp-api-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: erp-api-dev-trigger
