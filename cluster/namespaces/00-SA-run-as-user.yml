@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  namespace: run-as-user-dev
-  name: run-as-user-sa
-  labels:
-    bil.com/ibm-user: 'ca12345'
-    bil.com/groupid: '61115'
-    bil.com/userid: '61115'
