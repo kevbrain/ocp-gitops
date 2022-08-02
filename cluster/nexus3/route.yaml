@@ -11,7 +11,7 @@ metadata:
   name: nexus3
   namespace: nexus3
 spec:
-  host: nexus3-nexus3.apps.ocp-lab.its4u.eu
+  host: nexus3-nexus3.apps.ocp-lab2.its4u.eu
   port:
     targetPort: 8081-tcp
   to:
