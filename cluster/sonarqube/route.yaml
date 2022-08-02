@@ -11,7 +11,7 @@ metadata:
   name: sonarqube
   namespace: sonarqube
 spec:
-  host: sonarqube-sonarqube.apps.ocp-lab.its4u.eu
+  host: sonarqube-sonarqube.apps.ocp-lab2.its4u.eu
   port:
     targetPort: 9000-tcp
   to:
