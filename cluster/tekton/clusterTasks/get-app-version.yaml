@@ -1,0 +1,35 @@
+apiVersion: tekton.dev/v1beta1
+kind: ClusterTask
+metadata:
+  annotations:
+    tekton.dev/categories: CLI
+    tekton.dev/pipelines.minVersion: 0.12.1
+    tekton.dev/platforms: 'linux/amd64,linux/s390x,linux/ppc64le,linux/arm64'
+    tekton.dev/tags: search
+  labels:
+    app.kubernetes.io/version: '0.1'
+  name: get-app-version
+spec:
+  description: This task performs curl operation to transfer data from internet.
+  params:
+    - description: name of project
+      name: project-name
+      type: string
+    - default: >-
+        docker.io/curlimages/curl:7.72.0@sha256:bd5bbd35f89b867c1dccbc84b8be52f3f74dea20b46c5fe0db3780e040afcb6f
+      description: option of curl image
+      name: curl-image
+      type: string
+  results:
+    - description: The current application version
+      name: current-app-version
+  steps:
+    - image: $(params.curl-image)
+      name: curl
+      resources: {}
+      script: >
+        #!/usr/bin/env bash
+
+        curl
+        https://placeholdermanager-route-placeholdermanager-dev.apps.ocp-lab2.its4u.eu/projects/checkDevVersion/$(params.project-name)
+        | tee  $(results.current-app-version.path)
