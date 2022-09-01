@@ -8,7 +8,7 @@ metadata:
   name: el-memory-leak-dev-route
   namespace: memory-leak-dev
 spec:
-  host: el-memory-leak-dev.apps.ocp-lab.its4u.eu
+  host: el-memory-leak-dev.apps.ocp-lab2.its4u.eu
   port:
     targetPort: http-listener
   to:
