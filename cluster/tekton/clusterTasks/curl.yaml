@@ -6,7 +6,6 @@ metadata:
     tekton.dev/pipelines.minVersion: 0.12.1
     tekton.dev/platforms: 'linux/amd64,linux/s390x,linux/ppc64le,linux/arm64'
     tekton.dev/tags: search
-  resourceVersion: '481649061'
   name: curl
   labels:
     app.kubernetes.io/version: '0.1'
