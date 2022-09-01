@@ -8,7 +8,7 @@ metadata:
   name: el-capacity-tool-dev-route
   namespace: capacity-tool-dev
 spec:
-  host: el-capacity-tool-dev.apps.ocp-lab.its4u.eu
+  host: el-capacity-tool-dev.apps.ocp-lab2.its4u.eu
   port:
     targetPort: http-listener
   to:
