@@ -8,7 +8,7 @@ metadata:
   name: el-gitops-importer-dev-route
   namespace: gitops-importer-dev
 spec:
-  host: el-gitops-importer-dev.apps.ocp-lab.its4u.eu
+  host: el-gitops-importer-dev.apps.ocp2-lab.its4u.eu
   port:
     targetPort: http-listener
   to:
