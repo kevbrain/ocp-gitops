@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: formation-dev-trigger
+  namespace: formation-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: formation-dev-triggerbinding
+  template:
+    ref: formation-dev-triggertemplate
