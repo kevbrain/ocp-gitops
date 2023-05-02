@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - image: >-	
-          sonatype/nexus3@sha256:75fd31386b9c300df415d3e4edd464e8e27e1169e096132f56a40abfed7e4979
+          sonatype/nexus3@sha256:5ad9da8f8424e4a040456d9ffb4194296f1fdac01d0c2311ee6c6e282584d1ea
         name: nexus3
         ports:
         - containerPort: 8081
