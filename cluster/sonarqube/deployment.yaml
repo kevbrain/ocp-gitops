@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - image: >-
-          sonarqube@sha256:03aa10991cf77db09907a3a105d2c00c6432763c2f7f100210cc0c8d1e42f1e1
+          sonarqube@sha256:2c5e3b810a45551b90ed117e890388e686c855b3262eec4fa1e52b33d2d8815b
         name: sonarqube
         ports:
         - containerPort: 9000
