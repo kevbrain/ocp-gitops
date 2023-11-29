@@ -9,7 +9,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: ocs-storagecluster-ceph-rbd
+  storageClassName: managed-nfs-storage
   volumeMode: Filesystem
 status:
 
